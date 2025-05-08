@@ -23,6 +23,7 @@ select prod_name,
     --to_char(Š„ˆø‰¿Ši, '9g999g999d99')
 from product;
 */
+/*
 select prod_name, 
        cost, 
        discount, 
@@ -31,7 +32,18 @@ select prod_name,
                                          else discount    
     end, '9g999g999d99') as Š„ˆø‰¿Ši 
 from product
-order by Š„ˆø‰¿Ši desc limit 3;
---order by 4 desc;
+order by Š„ˆø‰¿Ši desc;
+order by 4 desc;
+*/
+
+select prod_name, 
+       cost, 
+       discount, 
+       to_char (cost * case when discount is null then 1 
+                            
+                                         else discount    
+    end, '9g999g999d99') as Š„ˆø‰¿Ši 
+from product 
+order by Š„ˆø‰¿Ši desc limit 3;--ã‚©‚ç3‚Â‚¾‚¯’Šo
 
 
