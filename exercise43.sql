@@ -48,16 +48,39 @@ select
     order by emp_id;
 */
 
+/*
 select psales_date, sum(total)
     from packedsales
     group by psales_date
     order by sum(total)
-    desc limit 5;--p48
+    desc limit 5;      --//p48
+*/
 
+/*
 select 
     distinct emp_id
     from packedsales
     order by emp_id;
+*/
+/*
+--//’S“–ŽÒ•\‚ÅA’S“–ŽÒ‚ÌŽá‚¢‡‚É•À‚Ñ‘Ö‚¦‚Ä’Šo
+select * from employee
+ order by birthday desc;
+ */
+
+/*
+--//»•i‚Æ‰¿Ši‚ð»•i•\‚©‚çÆ‰ï‚µA‰¿Ši‚Í10000‰~‘ä‚©‚Â»•i‚ªnull‚ðÆ‰ï
+select
+    discount, cost
+    from product
+    where (cost >= 10000 and cost <= 19999) and discount is null;
+*/
+
+/*
+select * from packedsales
+    where cust_address like '%`%';
+*/
+
 
 
 
